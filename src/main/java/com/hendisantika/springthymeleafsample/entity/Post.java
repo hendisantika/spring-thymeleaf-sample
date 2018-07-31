@@ -1,5 +1,6 @@
 package com.hendisantika.springthymeleafsample.entity;
 
+import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Column;
@@ -11,7 +12,6 @@ import javax.persistence.Lob;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Date;
@@ -38,16 +38,16 @@ public class Post implements Serializable {
 
     @Column(nullable = false, length = 150)
     @NotBlank(message = "Author is a required information.")
-    private String autor;
+    private String author;
 
     @Column(nullable = false, length = 150)
     @NotBlank(message = "Title is a required information.")
-    private String titulo;
+    private String title;
 
     @Column(nullable = false)
     @Lob
     @NotBlank(message = "Text is mandatory information.")
-    private String texto;
+    private String text;
 
     @Column(nullable = false)
     @Temporal(TemporalType.DATE)
@@ -63,28 +63,29 @@ public class Post implements Serializable {
         this.id = id;
     }
 
-    public String getAutor() {
-        return autor;
+
+    public String getAuthor() {
+        return author;
     }
 
-    public void setAutor(String autor) {
-        this.autor = autor;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
-    public String getTitulo() {
-        return titulo;
+    public String getTitle() {
+        return title;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public String getTexto() {
-        return texto;
+    public String getText() {
+        return text;
     }
 
-    public void setTexto(String texto) {
-        this.texto = texto;
+    public void setText(String text) {
+        this.text = text;
     }
 
     public Date getData() {
