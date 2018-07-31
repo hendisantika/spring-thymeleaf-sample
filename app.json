@@ -1,0 +1,14 @@
+{
+  "name": "SIAP - Diskanlut Provinsi Jawa barat",
+  "description": "Sistem Informasi Akuntansi Perikanan (SIAP) - Diskanlut Provinsi Jawa barat",
+  "repository": "https://gitlab.com/hendisantika/siap-diskanlut",
+  "keywords": [
+    "Spring Boot",
+    "Heroku",
+    "Deployment",
+    "Diskanlut",
+    "Jawa Barat",
+    "Dewi Purnamasari",
+    "Hendi Santika"
+  ]
+}
