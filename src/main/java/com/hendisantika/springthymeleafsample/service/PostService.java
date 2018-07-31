@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 /**
  * Created by IntelliJ IDEA.
@@ -28,8 +27,8 @@ public class PostService {
         return repository.findAll();
     }
 
-    public Optional<Post> findOne(Long id) {
-        return repository.findById(id);
+    public Post findOne(Long id) {
+        return repository.findOne(id);
     }
 
     public Post save(Post post) {
@@ -37,7 +36,7 @@ public class PostService {
     }
 
     public void delete(Long id) {
-        repository.deleteById(id);
+        repository.delete(id);
     }
 
 }
