@@ -4,13 +4,10 @@ import com.hendisantika.springthymeleafsample.entity.Post;
 import com.hendisantika.springthymeleafsample.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.validation.BindingResult;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
-
-import javax.validation.Valid;
 
 /**
  * Created by IntelliJ IDEA.
@@ -29,12 +26,10 @@ public class PostController {
     private PostService service;
 
     @GetMapping("/")
-    public ModelAndView findAll() {
+    public String findAll(ModelMap modelMap) {
+        modelMap.addAttribute("posts", service.findAll());
 
-        ModelAndView mv = new ModelAndView("/post");
-        mv.addObject("posts", service.findAll());
-
-        return mv;
+        return "post";
     }
 
     @GetMapping("/add")
@@ -52,23 +47,4 @@ public class PostController {
         return add(service.findOne(id));
     }
 
-    @GetMapping("/delete/{id}")
-    public ModelAndView delete(@PathVariable("id") Long id) {
-
-        service.delete(id);
-
-        return findAll();
-    }
-
-    @PostMapping("/save")
-    public ModelAndView save(@Valid Post post, BindingResult result) {
-
-        if(result.hasErrors()) {
-            return add(post);
-        }
-
-        service.save(post);
-
-        return findAll();
-    }
 }
