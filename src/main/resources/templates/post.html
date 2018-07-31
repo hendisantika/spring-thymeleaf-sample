@@ -19,8 +19,8 @@
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Autor</th>
-                    <th>T&iacute;tulo</th>
+                    <th>Author</th>
+                    <th>Title</th>
                     <th>Data</th>
                     <th></th>
                 </tr>
@@ -28,13 +28,13 @@
                 <tbody>
                 <tr th:each="post : ${posts}">
                     <td th:text="${post.id}"></td>
-                    <td th:text="${post.autor}"></td>
-                    <td th:text="${post.titulo}"></td>
+                    <td th:text="${post.author}"></td>
+                    <td th:text="${post.title}"></td>
                     <td th:text="${#dates.format(post.data, 'dd/MM/yyyy')}"></td>
                     <td>
                         <div class="btn-group pull-right">
-                            <a class="btn btn-sm btn-primary" th:href="@{/edit/{id}(id=${post.id})}">Editar</a>
-                            <a class="delete btn btn-sm btn-danger" th:href="@{/delete/{id}(id=${post.id})}">Excluir</a>
+                            <a class="btn btn-sm btn-primary" th:href="@{/edit/{id}(id=${post.id})}">Edit</a>
+                            <a class="delete btn btn-sm btn-danger" th:href="@{/delete/{id}(id=${post.id})}">Delete</a>
                         </div>
                     </td>
                 </tr>
@@ -43,7 +43,7 @@
         </div>
     </div>
     <div class="panel-footer">
-        <a class="btn btn-sm btn-success" th:href="@{/add/}">Adicionar</a>
+        <a class="btn btn-sm btn-success" th:href="@{/add/}">Add</a>
     </div>
 </div>
 </body>

@@ -31,17 +31,17 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <div class="col-md-4" th:classappend="${#fields.hasErrors('autor')}? 'has-error'">
-                            <label>Autor</label>
-                            <input type="text" class="form-control input-sm" th:field="*{autor}" autofocus="autofocus"
-                                   placeholder="Informe o autor" maxlength="50"/>
+                        <div class="col-md-4" th:classappend="${#fields.hasErrors('author')}? 'has-error'">
+                            <label>Author</label>
+                            <input type="text" class="form-control input-sm" th:field="*{author}" autofocus="autofocus"
+                                   placeholder="Report the author" maxlength="50"/>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <div class="col-md-4" th:classappend="${#fields.hasErrors('titulo')}? 'has-error'">
-                            <label>T&iacute;tulo</label>
-                            <input type="text" class="form-control input-sm" th:field="*{titulo}" maxlength="150"
-                                   placeholder="Informe o título"/>
+                        <div class="col-md-4" th:classappend="${#fields.hasErrors('title')}? 'has-error'">
+                            <label>Title</label>
+                            <input type="text" class="form-control input-sm" th:field="*{title}" maxlength="150"
+                                   placeholder="Report the title"/>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -51,17 +51,17 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <div class="col-md-4" th:classappend="${#fields.hasErrors('texto')}? 'has-error'">
-                            <label>Texto</label>
-                            <textarea class="form-control input-sm" th:field="*{texto}" cols="5" rows="5"
-                                      placeholder="Informe o texto"></textarea>
+                        <div class="col-md-4" th:classappend="${#fields.hasErrors('text')}? 'has-error'">
+                            <label>Text</label>
+                            <textarea class="form-control input-sm" th:field="*{text}" cols="5" rows="5"
+                                      placeholder="Report the text"></textarea>
                         </div>
                     </div>
                 </fieldset>
             </div>
             <div class="form-group row">
-                <button type="submit" class="btn btn-sm btn-primary">Salvar</button>
-                <a th:href="@{/}" class="btn btn-sm btn-default">Cancelar</a>
+                <button type="submit" class="btn btn-sm btn-primary">Submit</button>
+                <a th:href="@{/}" class="btn btn-sm btn-default">Cancel</a>
             </div>
         </form>
     </div>
