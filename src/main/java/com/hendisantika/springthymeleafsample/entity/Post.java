@@ -36,9 +36,8 @@ public class Post implements Serializable {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "post_seq")
     private Long id;
 
-    @Column(nullable = false, length = 150) //Define propriedades da coluna
+    @Column(nullable = false, length = 150)
     @NotBlank(message = "Author is a required information.")
-    //Define qual mensagem será exibida caso a validação da coluna falhar
     private String autor;
 
     @Column(nullable = false, length = 150)
