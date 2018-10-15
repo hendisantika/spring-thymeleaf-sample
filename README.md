@@ -10,7 +10,7 @@ Home Page
 
 Add New Post Page
 
-![Add New Post Page](img/add "Add New Post Page")
+![Add New Post Page](img/add.png "Add New Post Page")
 
 Edit Post Page
 
