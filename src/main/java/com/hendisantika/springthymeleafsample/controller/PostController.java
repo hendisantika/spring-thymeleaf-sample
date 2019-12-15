@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
+import java.util.Optional;
 
 /**
  * Created by IntelliJ IDEA.
@@ -48,8 +49,9 @@ public class PostController {
 
     @GetMapping("/edit/{id}")
     public ModelAndView edit(@PathVariable("id") Long id) {
-
-        return add(service.findOne(id));
+        Optional<Post> postOpt = service.findById(id);
+        Post post = postOpt.get();
+        return add(post);
     }
 
     @GetMapping("/delete/{id}")
